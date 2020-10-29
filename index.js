@@ -118,6 +118,10 @@ function fall() {
   }
 
   function moveLeft() {
+    clearInterval(leftTimerId);
+    clearInterval(rightTimerId);
+    isGoingRight = false;
+    isGoingLeft = true;
     if (isGoingRight) {
         clearInterval(rightTimerId)
         isGoingRight = false
@@ -133,6 +137,10 @@ function fall() {
   }
 
   function moveRight() {
+    clearInterval(leftTimerId);
+    clearInterval(rightTimerId);
+    isGoingLeft = false;
+    isGoingRight = true;
     if (isGoingLeft) {
         clearInterval(leftTimerId)
         isGoingLeft = false
